@@ -1,0 +1,75 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/Montserrat-Medium.ttf'), format('truetype');
+}
+
+
+:root {
+    --pry-font-color: #4c4646;
+    --pry-font-size: 0.8rem;
+    --pry-bg-color: #f9f0f0;
+    --pry-font: 'Montserrat', sans-serif;
+}
+
+/* reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* custom scroll-bar */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* --- container --- */
+.container {
+    height: 100%;
+    background-color: var(--pry-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.container__item {
+    background-color: #f0e9e9;
+    border-radius: 5px;
+    height: 8em;
+    width: calc(100vw / 3.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.container__item svg {
+    color: #ede9e9;
+    width: 90%;
+    height: 70px;
+}
+
+.container figcaption {
+    color: var(--pry-font-color);
+    font: 500 var(--pry-font-size) 'Montserrat';
+}
